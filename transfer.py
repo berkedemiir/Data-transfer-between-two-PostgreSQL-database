@@ -5,7 +5,7 @@ def transfer_data():
         source_conn = psycopg2.connect(
             dbname="source_db",
             user="source_user",
-            password="123",
+            password="source_password",
             host="localhost",
             port="5455"
         )
@@ -13,7 +13,7 @@ def transfer_data():
         target_conn = psycopg2.connect(
             dbname="target_db",
             user="target_user",
-            password="123",
+            password="target_password",
             host="localhost",
             port="5456"
         )
