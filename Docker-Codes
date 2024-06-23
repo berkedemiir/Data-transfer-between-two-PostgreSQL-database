@@ -3,8 +3,8 @@ docker run --name target_db -e POSTGRES_USER=target_user -e POSTGRES_PASSWORD=ta
 
 docker ps // check up if containers are working or not
 
-docker exec -it source_db psql -U source_user -d source_db // Connecting to Source Database
-docker exec -it target_db psql -U target_user -d target_db // Connecting to Target Database
+docker exec -it source-db psql -U source_user -d source_db // Connecting to Source Database
+docker exec -it target-db psql -U target_user -d target_db // Connecting to Target Database
 
 
 
