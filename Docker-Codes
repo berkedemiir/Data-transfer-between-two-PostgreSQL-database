@@ -6,5 +6,9 @@ docker ps // check up if containers are working or not
 docker exec -it source-db psql -U source_user -d source_db // Connecting to Source Database
 docker exec -it target-db psql -U target_user -d target_db // Connecting to Target Database
 
+\q // quit from database
+\dt // shows existing tables in the database
+
+
 
 
