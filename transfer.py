@@ -26,11 +26,6 @@ def transfer_data():
         for customer in customers:
             target_cur.execute("INSERT INTO customers (id, name, email, phone, created_at) VALUES (%s, %s, %s, %s, %s);", customer)
 
-        source_cur.execute("SELECT * FROM orders;")
-        orders = source_cur.fetchall()
-        for order in orders:
-            target_cur.execute("INSERT INTO orders (id, customer_id, product_name, quantity, order_date) VALUES (%s, %s, %s, %s, %s);", order)
-
         target_conn.commit()
 
         print("Veri aktarımı başarılı.")
