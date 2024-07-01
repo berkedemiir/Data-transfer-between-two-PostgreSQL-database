@@ -1,11 +1,8 @@
 docker run --name source_db -e POSTGRES_USER=source_user -e POSTGRES_PASSWORD=source_password -e POSTGRES_DB=source_db -p 5455:5432 -d postgres:13 // create source database container
 docker run --name target_db -e POSTGRES_USER=target_user -e POSTGRES_PASSWORD=target_password -e POSTGRES_DB=target_db -p 5456:5432 -d postgres:13 // create target database container
-
 docker ps // check up if containers are working or not
-
 docker exec -it source-db psql -U source_user -d source_db // Connecting to Source Database
 docker exec -it target-db psql -U target_user -d target_db // Connecting to Target Database
-
 \q // quit from database
 \dt // shows existing tables in the database
 
